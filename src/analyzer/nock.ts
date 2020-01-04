@@ -1,6 +1,7 @@
 import nock, { back as nockBack, BackContext, BackMode } from 'nock';
+import fs from 'fs';
+
 import { BaseAnalyzer } from './analyzer';
-// import fs from 'fs';
 
 
 interface NockBackManager {
@@ -13,13 +14,17 @@ export class NockAnalyzer extends BaseAnalyzer {
 
   private oldFixtures?: any;
 
+  private shouldCleanUpOnFailure = false;
+
+  private didFail = false;
+
   protected async startExec(): Promise<void> {
     nockBack.setMode('record');
 
     this.oldFixtures = nockBack.fixtures;
     nockBack.fixtures = this.opts.snapshotPath;
 
-    // fs.mkdirSync(this.opts.snapshotPath, { recursive: true });
+    this.shouldCleanUpOnFailure = !fs.existsSync(this.getOutputFile(true));
 
     this.nockBackManager = await nockBack(this.getOutputFile());
   }
@@ -31,12 +36,23 @@ export class NockAnalyzer extends BaseAnalyzer {
     }
 
     try {
-      this.nockBackManager.context.assertScopesFinished();
+      if (!this.didFail) {
+        this.nockBackManager.context.assertScopesFinished();
+      }
     } finally {
       this.nockBackManager.nockDone();
 
+      if ((this.shouldCleanUpOnFailure) && (this.didFail)) {
+        fs.unlinkSync(this.getOutputFile(true));
+      }
+
       nockBack.fixtures = this.oldFixtures;
     }
+  }
+
+
+  protected async onFailure(): Promise<void> {
+    this.didFail = true;
   }
 
 

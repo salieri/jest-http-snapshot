@@ -70,6 +70,9 @@ export abstract class BaseAnalyzer {
 
     try {
       await callback();
+    } catch (err) {
+      await this.onFailure(err);
+      throw err;
     } finally {
       await this.stop();
     }
@@ -99,6 +102,8 @@ export abstract class BaseAnalyzer {
   protected abstract startExec(): Promise<void>;
 
   protected abstract stopExec(): Promise<void>;
+
+  protected abstract onFailure(err: Error): Promise<void>;
 
   public abstract clear(): Promise<void>;
 }
