@@ -1,6 +1,6 @@
 {
   "name": "snapsnap",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tools for snapshotting, replaying, and mocking HTTP queries with Jest",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,6 +24,13 @@
     "build": "tsc",
     "test": "jest",
     "prepublishOnly": "npm test && npm run lint && rm -rf ./dist && npm run build",
+    "ci-codecov": "codecov -f coverage/*.json",
+    "ci-coveralls": "cat coverage/lcov.info | coveralls",
+    "ci-init": "rm -rf coverage && mkdir coverage",
+    "ci-reports": "npm run coverage",
+    "coverage": "jest --coverage",
+    "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls",
+    "docs": "typedoc --out ./docs --mode modules ./src",
     "lint:md": "remark .",
     "lint:eslint": "eslint 'src/**/*.ts' '__tests__/**/*.ts'",
     "lint:tslint": "tslint 'src/**/*.ts' '__tests__/**/*.ts'",
@@ -31,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salieri/jest-http-snapshot.git"
+    "url": "git+https://github.com/salieri/snapsnap.git"
   },
   "author": {
     "name": "Aleksi Asikainen",
@@ -39,9 +46,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/salieri/jest-http-snapshot/issues"
+    "url": "https://github.com/salieri/snapsnap/issues"
   },
-  "homepage": "https://github.com/salieri/jest-http-snapshot#readme",
+  "homepage": "https://github.com/salieri/snapsnap#readme",
   "engines": {
     "node": ">= 8.0.0"
   },

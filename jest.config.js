@@ -13,6 +13,7 @@ module.exports = {
   setupFilesAfterEnv: [
     './snap-setup.ts',
   ],
+  coverageDirectory: 'coverage',
 };
 
 
