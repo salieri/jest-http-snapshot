@@ -1,6 +1,6 @@
 {
   "name": "snapsnap",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Tools for snapshotting, replaying, and mocking HTTP queries with Jest",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
