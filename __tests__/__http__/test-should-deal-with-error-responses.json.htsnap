@@ -1,0 +1,23 @@
+[
+    {
+        "scope": "https://postman-echo.com:443",
+        "method": "GET",
+        "path": "/missinig-incorrect-url",
+        "body": "",
+        "status": 404,
+        "response": "",
+        "rawHeaders": [
+            "Date",
+            "Sat, 04 Jan 2020 19:45:37 GMT",
+            "Server",
+            "nginx",
+            "set-cookie",
+            "sails.sid=s%3A0YPkcRVwJ0ifhkp6iejkPsh61u2SCaDx.ewaw1mcJy9Tn20oxVGa3cymq8E6l33a0Tn49NQ%2FELgI; Path=/; HttpOnly",
+            "Content-Length",
+            "0",
+            "Connection",
+            "Close"
+        ],
+        "responseIsBinary": false
+    }
+]

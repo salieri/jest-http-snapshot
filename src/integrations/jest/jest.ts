@@ -1,4 +1,5 @@
 import path from 'path';
+import _ from 'lodash';
 
 import { NockAnalyzer } from '../../analyzer';
 import { Reporter } from './reporter';
@@ -63,13 +64,31 @@ class JestIntegration {
     return async () => {
       const na = new NockAnalyzer(
         {
-          identifier: this.reporter.currentSpec.fullName,
+          identifier: `${this.getCleanTestFileName()}-${this.reporter.currentSpec.fullName}`,
           snapshotPath: path.join(path.dirname(this.reporter.currentSpec.testPath), '__http__'),
         },
       );
 
       await na.run(() => (testFn.call({})));
     };
+  }
+
+
+  getCleanTestFileName(): string {
+    const fn = path.basename(this.reporter.currentSpec.testPath);
+
+    return _.reduce(
+      [
+        /.js$/,
+        /.ts$/,
+        /.jsx$/,
+        /.tsx$/,
+        /.test$/,
+        /.spec$/,
+      ],
+      (aggregator, regex) => aggregator.replace(regex, ''),
+      fn,
+    );
   }
 }
 
