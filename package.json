@@ -23,7 +23,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "rm -rf ./dist && npm run build",
+    "prepublishOnly": "npm test && npm run lint && rm -rf ./dist && npm run build",
     "lint:md": "remark .",
     "lint:eslint": "eslint 'src/**/*.ts' '__tests__/**/*.ts'",
     "lint:tslint": "tslint 'src/**/*.ts' '__tests__/**/*.ts'",
