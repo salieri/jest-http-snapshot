@@ -27,7 +27,6 @@
     "ci-codecov": "codecov -f coverage/*.json",
     "ci-coveralls": "cat coverage/lcov.info | coveralls",
     "ci-init": "rm -rf coverage && mkdir coverage",
-    "ci-reports": "npm run coverage",
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls",
     "docs": "typedoc --out ./docs --mode modules ./src",
