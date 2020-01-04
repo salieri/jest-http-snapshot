@@ -1,0 +1,71 @@
+{
+  "name": "jest-http-snapshot",
+  "version": "0.1.0",
+  "description": "Tools for snapshotting, replaying, and mocking HTTP queries with Jest",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "jest",
+    "http",
+    "api",
+    "snapshot"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec 'test/**/*.ts'",
+    "prepublishOnly": "rm -rf ./dist && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salieri/jest-http-snapshot.git"
+  },
+  "author": {
+    "name": "Aleksi Asikainen",
+    "email": "aleksi.asikainen@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salieri/jest-http-snapshot/issues"
+  },
+  "homepage": "https://github.com/salieri/jest-http-snapshot#readme",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "remark-cli": "^7.0.1",
+    "remark-preset-lint-recommended": "^3.0.3",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typedoc": "^0.15.6",
+    "typescript": "^3.7.4"
+  }
+}
