@@ -33,9 +33,11 @@
     "no-bitwise"                  : 0,
 
     "import/prefer-default-export": 0,
+    "import/extensions": [2, { "js": "never", "ts": "never" }],
 
     "@typescript-eslint/explicit-function-return-type": [2, {"allowExpressions": true, "allowTypedFunctionExpressions": true}],
     "@typescript-eslint/member-delimiter-style": [2],
+    "@typescript-eslint/no-explicit-any": 0,
 
     "max-lines": [2, {"max": 400}],
     "max-params": [2, {"max": 5}],

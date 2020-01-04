@@ -6,7 +6,8 @@
 	  "import-name"                 : false,
     "no-consecutive-blank-lines"  : [true, 2],
     "max-line-length"             : [true, 140],
-    "ter-indent"                  : false
+    "ter-indent"                  : false,
+    "ter-arrow-parens"            : false
   },
 
   "linterOptions": {

@@ -1,0 +1,33 @@
+[
+    {
+        "scope": "https://postman-echo.com:443",
+        "method": "GET",
+        "path": "/get?another=query",
+        "body": "",
+        "status": 200,
+        "response": [
+            "1f8b08000000000000035d50cb0e02210cfc15c3c9178b464f9b18bf05a10b244ab1db8daff8ef16e3237a6ada99ce4c7b539642afda9bb2193902a9561d07a08bbacf5504eb819ee8597748274b1ebc2e848cc28bcca55742c39ea52d520e366b70111b870741ac73502a3635d34fab213bf4290799876b2a730fddde320861e881b40d90eb4e460fba0376d12c9bc5683c7bfab5c684c471d8550bb34b9c72365fea44547eb22255adf57a550f1a68ffce2d3aff814d00debedeb0793de101c7ca4bf020010000"
+        ],
+        "rawHeaders": [
+            "Content-Encoding",
+            "gzip",
+            "Content-Type",
+            "application/json; charset=utf-8",
+            "Date",
+            "Sat, 04 Jan 2020 19:15:53 GMT",
+            "ETag",
+            "W/\"120-CA3lo0E5B7QRuFDVdnV4MtdjzoI\"",
+            "Server",
+            "nginx",
+            "set-cookie",
+            "sails.sid=s%3AdAC8YNBjJSRX-BKf7kKF0xA_6AflQE2R.uYFXpB2x7lRw%2F%2FqKZjWC25xVU6zJYUsL%2Fug4G4LAkQ4; Path=/; HttpOnly",
+            "Vary",
+            "Accept-Encoding",
+            "Content-Length",
+            "200",
+            "Connection",
+            "Close"
+        ],
+        "responseIsBinary": false
+    }
+]
