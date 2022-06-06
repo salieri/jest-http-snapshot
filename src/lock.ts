@@ -10,7 +10,7 @@ export class Locker {
 
   public acquire(): Promise<LockManager> {
     return new Promise(
-      (resolve: Function, reject: Function) => {
+      (resolve, reject) => {
         try {
           this.lock.acquire(
             Locker.LOCK_NAME,

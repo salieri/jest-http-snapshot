@@ -1,6 +1,7 @@
 export class LockManager {
   private promise   : Promise<void>;
 
+  // eslint-disable-next-line @typescript-eslint/ban-types
   private resolver? : Function;
 
   public constructor() {

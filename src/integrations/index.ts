@@ -1,1 +1,1 @@
-export * from './jest';
+export * as jest from './jest';

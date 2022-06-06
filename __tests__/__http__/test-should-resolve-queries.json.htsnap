@@ -13,7 +13,7 @@
                 "x-forwarded-proto": "https",
                 "x-forwarded-port": "443",
                 "host": "postman-echo.com",
-                "x-amzn-trace-id": "Root=1-629d65c9-32fd19d246c68ccb20649c43",
+                "x-amzn-trace-id": "Root=1-629d661c-5220cece0d14247b1f34d5dc",
                 "accept": "*/*",
                 "user-agent": "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)",
                 "accept-encoding": "gzip,deflate"
@@ -22,7 +22,7 @@
         },
         "rawHeaders": [
             "Date",
-            "Mon, 06 Jun 2022 02:26:17 GMT",
+            "Mon, 06 Jun 2022 02:27:40 GMT",
             "Content-Type",
             "application/json; charset=utf-8",
             "Content-Length",
@@ -30,11 +30,11 @@
             "Connection",
             "close",
             "ETag",
-            "W/\"15d-ptLYg6BRa1u8KfI6cUIXDDZd5pk\"",
+            "W/\"15d-7ltp/VNrTsqpTwp0GeWiAa16sws\"",
             "Vary",
             "Accept-Encoding",
             "set-cookie",
-            "sails.sid=s%3Ad7njBvw_Akb-RRoaqVpSoY7hPitMWKsw.DW9kItRRjbzsntbGf8EwAkx8xNKc62yr3eOYe%2FjqYes; Path=/; HttpOnly"
+            "sails.sid=s%3AFNlTS3RBXAkO1BFRDqgVkJD0W3YxyqTo.mdlInSk5lidgls5lDoZ3x0VN1P%2FihUHYwymhvf6Gyuo; Path=/; HttpOnly"
         ],
         "responseIsBinary": false
     }

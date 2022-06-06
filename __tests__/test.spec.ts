@@ -1,4 +1,5 @@
-import 'isomorphic-fetch';
+import fetch from 'node-fetch';
+
 import '../src/declarations';
 
 it.snap(
@@ -10,7 +11,6 @@ it.snap(
   },
 );
 
-
 it.snap(
   'should use Nock Back cache to resolve queries',
   async () => {
@@ -20,12 +20,18 @@ it.snap(
   },
 );
 
-
 it.snap(
-  'should resolve another query',
+  'should resolve queries',
   async () => {
-    const response = await fetch('https://postman-echo.com/get?another=query');
+    const url = 'https://postman-echo.com/get?another=query';
+    const response = await fetch(url);
 
-    expect(await response.json()).toMatchSnapshot();
+    const data = await response.json();
+
+    expect(data.url).toEqual(url);
+    expect(data.args.another).toEqual('query');
+    expect(data.headers.host).toEqual('postman-echo.com');
+
+    expect(data).toMatchSnapshot();
   },
 );

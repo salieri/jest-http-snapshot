@@ -1,21 +1,45 @@
 {
   "compilerOptions": {
-    "target"            : "es5",
-    "moduleResolution"  : "node",
-    "module"            : "commonjs",
-    "allowJs"           : false,
-    "checkJs"           : false,
-    "strict"            : true,
-    "isolatedModules"   : false,
-    "esModuleInterop"   : true,
-    "sourceMap"         : true,
-    "resolveJsonModule" : true,
-    "noImplicitAny"     : true,
-    "declaration"       : true,
-    "declarationMap"    : true,
-    "outDir"            : "./dist"
-  },
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "alwaysStrict": true,
+    "lib": [
+      "es2017"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "target": "es2017",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noErrorTruncation": true,
+    "inlineSources": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
 
+    "skipLibCheck": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "./src/**/*.ts"
   ]

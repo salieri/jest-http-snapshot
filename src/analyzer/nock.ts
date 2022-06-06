@@ -5,6 +5,7 @@ import { BaseAnalyzer } from './analyzer';
 
 interface NockBackManager {
   context: BackContext;
+  // eslint-disable-next-line @typescript-eslint/ban-types
   nockDone: Function;
 }
 

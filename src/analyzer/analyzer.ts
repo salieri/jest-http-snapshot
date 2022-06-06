@@ -10,6 +10,8 @@ export interface AnalyzerOpts {
 }
 
 export abstract class BaseAnalyzer {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   private static readonly LOCK_NAME = 'mock-analyzer-lock';
 
   private lockManager? : LockManager;
