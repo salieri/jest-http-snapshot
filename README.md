@@ -41,7 +41,7 @@ Snapsnap is implemented as a [test environment](https://jestjs.io/docs/configura
 ```js
 // ./jest.config.js
 module.exports = {
-  testEnvironment: 'snapsnap/jest-env.js'
+    testEnvironment: 'snapsnap/dist/integrations/jest/environment.js'
 };
 ```
 
